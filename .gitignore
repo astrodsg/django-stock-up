@@ -1,0 +1,12 @@
+# Project Based #
+#################
+stock_up/settings/production.py
+
+# Data bases #
+##############
+*sqlite3
+
+# Python Compiled #
+###################
+*py[c,o]
+__pycache__
