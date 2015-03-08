@@ -1,0 +1,21 @@
+.nav-collapse {
+    float: right;
+    display: inline-block;
+}
+
+.jumbotron {
+    font-size: 30px;
+    text-align: center;
+
+}
+
+footer {
+    bottom: 0px;
+    position:absolute;
+}
+
+@media (min-width:768px){
+    body {
+        padding-top:80px;
+    }
+}

@@ -1,0 +1,1 @@
+from stock_up.settings.base import *
