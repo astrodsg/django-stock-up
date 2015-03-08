@@ -10,24 +10,13 @@ class BaseTemplateView(TemplateView):
         context['title'] = "StockUp"        
         context['navbar_title'] = "StockUp"
         context['navbar_items'] = [\
-            ("Home","/"),
+            ("About","/about"),
             ("Log In","/login"),
             ]
         return context
 
 class HomeView(BaseTemplateView):
-
     template_name = "stock_up/index.html"
-
-    def get_context_data(self,**kws):
-        context = super().get_context_data(**kws)
-        context['message'] = "hello world!"
-        return context 
-
-    # def get(self, request, *args, **kwargs):
-    #     context = super().get_context_data(**kws)
-    #     return HttpResponse('Hello, World!')
-
 
 class LoginView(BaseTemplateView):
 
@@ -36,3 +25,6 @@ class LoginView(BaseTemplateView):
     def get_context_data(self,**kws):
         context = super().get_context_data(**kws)
         return context 
+    # def get(self, request, *args, **kwargs):
+    #     context = super().get_context_data(**kws)
+    #     return HttpResponse('Hello, World!')
