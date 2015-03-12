@@ -11,9 +11,9 @@
       </a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-          {% for title,url in navbar_items %}
+          {% for link in navbar_items.values %}
           <li>
-            <a href="{{ url }}">{{ title }}</a>
+            {{ link.to_html|safe }}
           </li>
           {% endfor %}
         </ul>
