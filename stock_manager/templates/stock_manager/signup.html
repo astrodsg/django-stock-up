@@ -1,0 +1,12 @@
+{% extends "stock_up/_base.html" %}
+
+{% block body %}
+{% if userform %}
+<form method="post" action="">
+    {% csrf_token %}
+    {{ userform.as_p }}
+    <br>
+    <input type="submit" value="Sign Up">
+</form>
+{% endif %}
+{% endblock %}
