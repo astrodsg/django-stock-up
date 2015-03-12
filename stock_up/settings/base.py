@@ -40,7 +40,6 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,"stock_manager","templates"), 
 )
 
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -50,6 +49,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'stock_manager',
+    'class_based_auth_views',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,4 +101,11 @@ STATICFILES_DIRS = (
 )
 
 
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
+#ACCOUNT_SIGNUP_FORM_CLASS = 'accounts.forms.SignupForm'
 
+
+REDIRECT_FIELD_NAME = "/login/"
+
+#AUTH_USER_MODEL = 'stock_manager.StockUpUser'
